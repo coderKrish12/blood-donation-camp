@@ -58,11 +58,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'blood_camp.urls'
+ALLOWED_HOSTS= os.getenv("DJANGO_ALLOWED_HOSTS").split(",") if os.getenv("DJANGO_ALLOWED_HOSTS") else ("127.0.0.1,localhost").split(",")
 
-if (os.getenv("DJANGO_ALLOWED_HOSTS")):
-    ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS").split(",")
-else:
-    ALLOWED_HOSTS = ("127.0.0.1,localhost").split(",")
 
 FRONTEND_URL = os.getenv('FRONTEND_URL')
 
