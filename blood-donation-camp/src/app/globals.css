@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-libre: var(--font-libre-baskerville);
+}
+
+.input {
+  @apply w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-300;
+}
